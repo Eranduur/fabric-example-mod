@@ -1,4 +1,4 @@
-package com.github.eranduur;
+package com.github.eranduur.items;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
