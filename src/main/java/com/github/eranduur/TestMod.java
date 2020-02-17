@@ -15,7 +15,7 @@ public class TestMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		Registry.register(Registry.ITEM, new Identifier("testmod", "creeperheart"), CREEPER_HEART);
+		Registry.register(Registry.ITEM, new Identifier("testmod", "creeper_heart"), CREEPER_HEART);
 		Registry.register(Registry.ITEM, new Identifier("testmod", "lute"), LUTE);
 
 		System.out.println("Hello Fabric world!");
