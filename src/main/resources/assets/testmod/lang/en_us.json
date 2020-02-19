@@ -1,4 +1,6 @@
 {
   "item.testmod.creeper_heart": "Creeper Heart",
-  "item.testmod.lute": "Lute"
+  "item.testmod.lute": "Lute",
+  "block.testmod.fishscale_cobblestone": "Fish Scale Cobblestone",
+  "itemGroup.testmod.group": "Test Mod"
 }
