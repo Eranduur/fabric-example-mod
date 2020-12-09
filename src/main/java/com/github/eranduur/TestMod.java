@@ -1,6 +1,8 @@
 package com.github.eranduur;
 
+import com.github.eranduur.blocks.CopperOreBlock;
 import com.github.eranduur.blocks.FishscaleCobblestoneBlock;
+import com.github.eranduur.items.BasicItem;
 import com.github.eranduur.items.CreeperHeartItem;
 import com.github.eranduur.items.LuteItem;
 import net.fabricmc.api.ModInitializer;
@@ -28,9 +30,15 @@ public class TestMod implements ModInitializer {
 	private static final Item CREEPER_HEART = new CreeperHeartItem(new Item.Settings().group(TestMod.GROUP).maxCount(32));
 	private static final Item LUTE = new LuteItem(new Item.Settings().group(TestMod.GROUP).maxCount(1));
 
+	//Brain's stupid item that he made me make him
+	private static final Item BRIAN_ITEM = new BasicItem(new Item.Settings().group(TestMod.GROUP).maxCount(1));
+
 	//Blocks
 	private static final Block FISHSCALE_COBBLESTONE = new FishscaleCobblestoneBlock(FabricBlockSettings.of(Material.STONE).build());
 	private static final Item FISHSCALE_COBBLESTONE_ITEM = new BlockItem(FISHSCALE_COBBLESTONE, new Item.Settings().group(TestMod.GROUP));
+
+	private static final Block COPPER_ORE = new CopperOreBlock(FabricBlockSettings.of(Material.STONE).build());
+	private static final Item COPPER_ORE_ITEM = new BlockItem(COPPER_ORE, new Item.Settings().group(TestMod.GROUP));
 
 	@Override
 	public void onInitialize() {
@@ -38,9 +46,15 @@ public class TestMod implements ModInitializer {
 		Registry.register(Registry.ITEM, new Identifier("testmod", "creeper_heart"), CREEPER_HEART);
 		Registry.register(Registry.ITEM, new Identifier("testmod", "lute"), LUTE);
 
+		//Brain's stupid item that he made me make him
+		Registry.register(Registry.ITEM, new Identifier("testmod", "brian_item"), BRIAN_ITEM);
+
 		//Blocks
 		Registry.register(Registry.BLOCK, new Identifier("testmod", "fishscale_cobblestone"), FISHSCALE_COBBLESTONE);
 		Registry.register(Registry.ITEM, new Identifier("testmod", "fishscale_cobblestone"), FISHSCALE_COBBLESTONE_ITEM);
+
+		Registry.register(Registry.BLOCK, new Identifier("testmod", "copper_ore"), COPPER_ORE);
+		Registry.register(Registry.ITEM, new Identifier("testmod", "copper_ore"), COPPER_ORE_ITEM);
 
 		//Sounds
 		Registry.register(Registry.SOUND_EVENT, TestMod.LUTE_NOISE_ID, LUTE_NOISE_EVENT);
